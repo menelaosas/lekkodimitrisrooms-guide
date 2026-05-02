@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sea: #2A6CA4;
+  --sea-d: #1A4E7A;
+  --sea-l: #E8F2FA;
+  --terra: #C4672A;
+  --terra-l: #FDF1EA;
+  --sand: #FAF8F3;
+  --ink: #1A2E3B;
+  --warm: #6B7A84;
+  --pb: #8C9BA5;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background-color: #FAF8F3; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; color: #1A2E3B; overflow-x: hidden; }
+  :focus-visible { outline: 2px solid #2A6CA4; outline-offset: 2px; }
+  :focus:not(:focus-visible) { outline: none; }
+}
+
+@layer utilities {
+  .guide-card {
+    background-color: white;
+    border: 1px solid rgba(42, 53, 64, 0.08);
+    border-radius: 12px;
+  }
+  .step-num {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background-color: #2A6CA4;
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .badge-ok   { background-color: #f0fdf4; color: #15803d; font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 999px; }
+  .badge-no   { background-color: #fef2f2; color: #dc2626; font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 999px; }
+  .badge-warn { background-color: #fffbeb; color: #d97706; font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 999px; }
+  .info-box {
+    background-color: rgba(42, 108, 164, 0.08);
+    color: #1A4E7A;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .terra-box {
+    background-color: rgba(196, 103, 42, 0.08);
+    color: #C4672A;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .copy-btn {
+    background-color: rgba(42, 108, 164, 0.1);
+    color: #2A6CA4;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .copy-btn:hover { background-color: #2A6CA4; color: white; }
+  .submit-btn {
+    width: 100%;
+    background-color: #2A6CA4;
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s;
+  }
+  .submit-btn:hover { background-color: #1A4E7A; }
+  .fade-up { animation: fadeUp 0.25s ease forwards; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-thumb { background-color: rgba(42, 108, 164, 0.2); border-radius: 999px; }
