@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { LangProvider } from "@/lib/lang-context";
 import { NavProvider } from "@/lib/nav-context";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "LekkoDimitris Rooms — Οδηγός Επισκεπτών",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LangProvider>
           <NavProvider>{children}</NavProvider>
         </LangProvider>
+        <Analytics />
       </body>
     </html>
   );
