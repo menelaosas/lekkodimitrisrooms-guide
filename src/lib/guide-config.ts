@@ -15,7 +15,7 @@ export const PROPERTY = {
   checkin: "14:00",
   checkout: "11:00",
   host: {
-    el: "Είμαι ο Δημήτρης Λέκκος. Είμαι πάντα διαθέσιμος για οτιδήποτε χρειαστείτε. Η φιλοξενία για μένα δεν είναι δουλειά — είναι χαρά.",
+    el: "Είμαι ο Νικόλαος Λεκκοδημήτηρς. Είμαι πάντα διαθέσιμος για οτιδήποτε χρειαστείτε. Η φιλοξενία για μένα δεν είναι δουλειά, είναι χαρά.",
     en: "I'm Dimitris Lekko. I'm always available for anything you need. Hospitality is not work for me — it's joy.",
   },
 };

@@ -61,7 +61,7 @@ export function SectionWelcome() {
             <span className="text-white font-serif text-lg font-light">Δ</span>
           </div>
           <div>
-            <p className="text-[13px] font-medium text-ink">Δημήτρης Λέκκος</p>
+            <p className="text-[13px] font-medium text-ink">Λεκκοδημήτρης</p>
             <p className="text-[12px] text-warm leading-relaxed mt-0.5">{PROPERTY.host[lang]}</p>
           </div>
         </div>
