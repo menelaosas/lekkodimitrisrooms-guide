@@ -3,7 +3,7 @@ import { useNav } from "@/lib/nav-context";
 import { useLang } from "@/lib/lang-context";
 import { NAV_ITEMS } from "@/lib/guide-config";
 import {
-  Home, Wifi, ShieldCheck, Settings, MapPin, Bell, HelpCircle, Star, QrCode,
+  Home, Wifi, ShieldCheck, Settings, MapPin, Bell, HelpCircle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -15,8 +15,6 @@ const ICONS: Record<string, React.ReactNode> = {
   area:       <MapPin size={18} strokeWidth={1.6} />,
   services:   <Bell size={18} strokeWidth={1.6} />,
   faq:        <HelpCircle size={18} strokeWidth={1.6} />,
-  review:     <Star size={18} strokeWidth={1.6} />,
-  qr:         <QrCode size={18} strokeWidth={1.6} />,
 };
 
 export function GuideTabBar() {

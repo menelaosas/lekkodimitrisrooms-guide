@@ -30,8 +30,6 @@ export const NAV_ITEMS = {
     { id: "area", label: "Περιοχή" },
     { id: "services", label: "Αιτήματα" },
     { id: "faq", label: "FAQ" },
-    { id: "review", label: "Αξιολόγηση" },
-    { id: "qr", label: "QR Code" },
   ],
   en: [
     { id: "welcome", label: "Home" },
@@ -41,8 +39,6 @@ export const NAV_ITEMS = {
     { id: "area", label: "Area Guide" },
     { id: "services", label: "Requests" },
     { id: "faq", label: "FAQ" },
-    { id: "review", label: "Reviews" },
-    { id: "qr", label: "QR Code" },
   ],
 };
 

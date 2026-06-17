@@ -11,8 +11,6 @@ import { SectionAppliances } from "./SectionAppliances";
 import { SectionArea } from "./SectionArea";
 import { SectionServices } from "./SectionServices";
 import { SectionFaq } from "./SectionFaq";
-import { SectionReview } from "./SectionReview";
-import { SectionQr } from "./SectionQr";
 
 const SECTIONS: Record<string, React.ReactNode> = {
   welcome: <SectionWelcome />,
@@ -22,8 +20,6 @@ const SECTIONS: Record<string, React.ReactNode> = {
   area: <SectionArea />,
   services: <SectionServices />,
   faq: <SectionFaq />,
-  review: <SectionReview />,
-  qr: <SectionQr />,
 };
 
 export function GuideShell() {
