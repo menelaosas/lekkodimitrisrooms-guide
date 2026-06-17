@@ -1,7 +1,7 @@
 "use client";
 import { useLang } from "@/lib/lang-context";
 import { AREA_PLACES } from "@/lib/guide-config";
-import { Landmark, Waves, UtensilsCrossed } from "lucide-react";
+import { Landmark, Waves, UtensilsCrossed, Coffee } from "lucide-react";
 
 function PlaceRow({ name, info, dist }: { name: string; info: string; dist: string }) {
   return (
@@ -41,14 +41,24 @@ export function SectionArea() {
         {places.beaches.map((p, i) => <PlaceRow key={i} {...p} />)}
       </div>
 
-      <div className="guide-card p-4">
+      <div className="guide-card p-4 mb-4">
         <div className="flex items-center gap-2 mb-2">
           <UtensilsCrossed size={15} strokeWidth={1.5} className="text-sea" />
           <p className="text-[10px] tracking-widest uppercase text-pb">
-            {lang === "el" ? "Φαγητό & Καφέ" : "Food & Coffee"}
+            {lang === "el" ? "Φαγητό στη Μονεμβασιά" : "Food in Monemvasia"}
           </p>
         </div>
         {places.food.map((p, i) => <PlaceRow key={i} {...p} />)}
+      </div>
+
+      <div className="guide-card p-4">
+        <div className="flex items-center gap-2 mb-2">
+          <Coffee size={15} strokeWidth={1.5} className="text-sea" />
+          <p className="text-[10px] tracking-widest uppercase text-pb">
+            {lang === "el" ? "Καφές, Κρασί & Ποτό" : "Coffee, Wine & Drinks"}
+          </p>
+        </div>
+        {places.cafes.map((p, i) => <PlaceRow key={i} {...p} />)}
       </div>
     </>
   );

@@ -1,13 +1,14 @@
 "use client";
 import { useLang } from "@/lib/lang-context";
-import { PROPERTY_INFO, HOUSE_RULES } from "@/lib/guide-config";
-import { CheckCircle, XCircle, Clock, Home } from "lucide-react";
+import { PROPERTY_INFO, HOUSE_RULES, AMENITIES } from "@/lib/guide-config";
+import { CheckCircle, XCircle, Clock, Home, Package } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function SectionRules() {
   const { lang } = useLang();
   const info = PROPERTY_INFO[lang];
   const rules = HOUSE_RULES[lang];
+  const amenities = AMENITIES[lang];
 
   return (
     <>
@@ -41,7 +42,7 @@ export function SectionRules() {
             {lang === "el" ? "Ώρες Ησυχίας" : "Quiet Hours"}
           </p>
         </div>
-        <p className="text-[22px] font-serif font-light text-ink">23:00 — 08:00</p>
+        <p className="text-[22px] font-serif font-light text-ink">23:00 08:00</p>
         <p className="text-[12px] text-warm mt-1">
           {lang === "el"
             ? "Παρακαλώ σεβαστείτε τους γείτονες κατά τις ώρες ησυχίας."
@@ -50,7 +51,7 @@ export function SectionRules() {
       </div>
 
       {/* Rules */}
-      <div className="guide-card p-4">
+      <div className="guide-card p-4 mb-4">
         <p className="text-[10px] tracking-widest uppercase text-pb mb-3">
           {lang === "el" ? "Κανόνες Σπιτιού" : "House Rules"}
         </p>
@@ -71,6 +72,24 @@ export function SectionRules() {
                 rule.type === "info" && "bg-sea/10 text-sea-d",
               )}>{rule.badge}</span>
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Amenities */}
+      <div className="guide-card p-4">
+        <div className="flex items-center gap-2 mb-3">
+          <Package size={15} strokeWidth={1.5} className="text-sea" />
+          <p className="text-[10px] tracking-widest uppercase text-pb">
+            {lang === "el" ? "Παροχές" : "Amenities"}
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {amenities.map((item, i) => (
+            <span key={i} className="flex items-center gap-1 text-[11px] font-medium text-sea-d bg-sea/10 px-2.5 py-1 rounded-full">
+              <CheckCircle size={10} strokeWidth={2} className="text-sea flex-shrink-0" />
+              {item}
+            </span>
           ))}
         </div>
       </div>

@@ -4,16 +4,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        sand: "#FAF8F3",
-        ink: "#1A2E3B",
-        sea: "#2A6CA4",
-        "sea-d": "#1A4E7A",
-        "sea-l": "#E8F2FA",
+        sand: "#F4EBDA",
+        ink: "#2C1A0E",
+        sea: "#8B5E3C",
+        "sea-d": "#6B4828",
+        "sea-l": "#EDE0D4",
         terra: "#C4672A",
         "terra-l": "#FDF1EA",
-        warm: "#6B7A84",
-        pb: "#8C9BA5",
-        stone: "#2A3540",
+        warm: "#7A6A5A",
+        pb: "#A09080",
+        stone: "#2C1A0E",
       },
       fontFamily: {
         serif: ["'Cormorant Garamond'", "Georgia", "serif"],

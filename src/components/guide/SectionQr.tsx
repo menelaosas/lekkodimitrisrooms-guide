@@ -38,8 +38,8 @@ export function SectionQr() {
   const tips = QR_TIPS[lang];
 
   const emailTemplate = lang === "el"
-    ? `Θέμα: Οδηγός Διαμονής — LekkoDimitris Rooms, Μονεμβασιά\n\nΑγαπητέ/ή επισκέπτη,\n\nΣας καλωσορίζουμε στα LekkoDimitris Rooms!\n\nΟ ψηφιακός οδηγός διαμονής σας:\n${PROPERTY.guideUrl}\n\nΠεριέχει πληροφορίες WiFi, check-in, κανόνες, οδηγίες συσκευών, οδηγό περιοχής και πολλά άλλα.\n\nΓια οποιαδήποτε ερώτηση: ${PROPERTY.phone}\n\nΚαλή διαμονή!\nΝίκος Λεκκοδημήτρης`
-    : `Subject: Stay Guide — LekkoDimitris Rooms, Monemvasia\n\nDear guest,\n\nWelcome to LekkoDimitris Rooms!\n\nYour digital stay guide:\n${PROPERTY.guideUrl}\n\nIt includes WiFi info, check-in, house rules, appliance guides, area guide and much more.\n\nFor any questions: ${PROPERTY.phone}\n\nEnjoy your stay!\nNikos Lekkodimitris`;
+    ? `Θέμα: Οδηγός Διαμονής LImeraView, Μονεμβασιά\n\nΑγαπητέ/ή επισκέπτη,\n\nΣας καλωσορίζουμε στο LImeraView!\n\nΟ ψηφιακός οδηγός διαμονής σας:\n${PROPERTY.guideUrl}\n\nΠεριέχει πληροφορίες WiFi, check-in, κανόνες, οδηγίες συσκευών, οδηγό περιοχής και πολλά άλλα.\n\nΓια οποιαδήποτε ερώτηση: ${PROPERTY.phone}\n\nΚαλή διαμονή!\nΝίκος Ασημίνα Λενάκου`
+    : `Subject: Stay Guide LImeraView, Monemvasia\n\nDear guest,\n\nWelcome to LImeraView!\n\nYour digital stay guide:\n${PROPERTY.guideUrl}\n\nIt includes WiFi info, check-in, house rules, appliance guides, area guide and much more.\n\nFor any questions: ${PROPERTY.phone}\n\nEnjoy your stay!\nNikos Lekkodimitris`;
 
   const copyEmail = () => {
     navigator.clipboard.writeText(emailTemplate).catch(() => {});
@@ -103,8 +103,8 @@ export function SectionQr() {
           </p>
           <p className="text-[12px] text-sea-d">
             {lang === "el"
-              ? "Οδηγός Διαμονής — Lekko Dimitris Rooms, Μονεμβασιά"
-              : "Stay Guide — Lekko Dimitris Rooms, Monemvasia"}
+              ? "Οδηγός Διαμονής LImeraView, Μονεμβασιά"
+              : "Stay Guide LImeraView, Monemvasia"}
           </p>
         </div>
         <button onClick={copyEmail} className="submit-btn flex items-center justify-center gap-2">

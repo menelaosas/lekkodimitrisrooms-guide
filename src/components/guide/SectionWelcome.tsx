@@ -2,7 +2,7 @@
 import { useLang } from "@/lib/lang-context";
 import { useNav } from "@/lib/nav-context";
 import { PROPERTY } from "@/lib/guide-config";
-import { Wifi, ShieldCheck, MapPin, Settings, Phone, MessageCircle, Mail } from "lucide-react";
+import { Wifi, ShieldCheck, MapPin, Settings, Phone, MessageCircle, Mail, Globe } from "lucide-react";
 
 const QUICK = [
   { id: "wifi",       Icon: Wifi,        el: "WiFi & Check-in",   en: "WiFi & Check-in" },
@@ -24,8 +24,8 @@ export function SectionWelcome() {
         </p>
         <p className="text-[13px] leading-relaxed opacity-85">
           {lang === "el"
-            ? "Χαιρόμαστε που θα φιλοξενηθείτε στα Lekko Dimitris Rooms. Αυτός ο οδηγός έχει ό,τι χρειάζεστε κατά τη διαμονή σας στη Γεφύρα."
-            : "We're delighted to have you at Lekko Dimitris Rooms. This guide has everything you need during your stay in Gefyra."}
+            ? "Χαιρόμαστε που θα φιλοξενηθείτε στο LImeraView. Αυτός ο οδηγός έχει ό,τι χρειάζεστε κατά τη διαμονή σας στη Μονεμβασιά."
+            : "We're delighted to have you at LImeraView. This guide has everything you need during your stay in Gefyra."}
         </p>
         <div className="mt-3 flex gap-2">
           <span className="bg-white/20 text-white text-[10px] font-medium px-2.5 py-1 rounded-full">
@@ -61,7 +61,7 @@ export function SectionWelcome() {
             <span className="text-white font-serif text-lg font-light">Δ</span>
           </div>
           <div>
-            <p className="text-[13px] font-medium text-ink">Λεκκοδημήτρης</p>
+            <p className="text-[13px] font-medium text-ink">Ασημίνα Λενάκου</p>
             <p className="text-[12px] text-warm leading-relaxed mt-0.5">{PROPERTY.host[lang]}</p>
           </div>
         </div>
@@ -85,6 +85,11 @@ export function SectionWelcome() {
           <a href={`mailto:${PROPERTY.email}`} className="flex items-center gap-3 text-[13px] text-warm hover:text-sea transition-colors">
             <Mail size={14} strokeWidth={1.5} className="text-sea flex-shrink-0" />
             {PROPERTY.email}
+          </a>
+          <a href={`https://${PROPERTY.website}`} target="_blank" rel="noopener noreferrer"
+             className="flex items-center gap-3 text-[13px] text-warm hover:text-sea transition-colors">
+            <Globe size={14} strokeWidth={1.5} className="text-sea flex-shrink-0" />
+            {PROPERTY.website}
           </a>
         </div>
       </div>

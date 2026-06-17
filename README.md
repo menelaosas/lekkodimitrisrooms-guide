@@ -1,4 +1,4 @@
-# Δρ. Καλογηράτου — Ιστότοπος Παθολόγου
+# Δρ. Καλογηράτου Ιστότοπος Παθολόγου
 
 Production-grade Next.js website for a pathologist's private practice.
 
@@ -14,8 +14,8 @@ Production-grade Next.js website for a pathologist's private practice.
 | **TypeScript (strict)** | Catches bugs at compile time. All props, config data, and API payloads are typed. |
 | **Tailwind CSS** | Utility-first keeps styles co-located with markup, no dead CSS in production (PurgeCSS built-in). |
 | **Framer Motion** | Best-in-class React animation. Tree-shakeable. Used *only* in Client Components so it doesn't affect server render. |
-| **next/font** | Fonts are subsetted, inlined, and served from the same origin — zero CLS, no Google Font waterfall. |
-| **next/image** | Automatic WebP/AVIF, lazy loading, and correct aspect ratio — Core Web Vitals optimized. |
+| **next/font** | Fonts are subsetted, inlined, and served from the same origin zero CLS, no Google Font waterfall. |
+| **next/image** | Automatic WebP/AVIF, lazy loading, and correct aspect ratio Core Web Vitals optimized. |
 | **react-hook-form + zod** | Lightweight, performant form handling with schema validation shared between client and server. |
 | **API Route for contact** | No third-party JS on the page. Rate limiting and validation server-side. GDPR-friendly. |
 
@@ -55,7 +55,7 @@ Office   → LEFT / RIGHT
 Contact  → LEFT / RIGHT
 ```
 
-This is controlled entirely in `src/lib/motion.ts` — change variants there to adjust all animations at once.
+This is controlled entirely in `src/lib/motion.ts` change variants there to adjust all animations at once.
 
 ---
 
@@ -207,7 +207,7 @@ npm run start
 ### Alternative: Formspree (simpler, no server code)
 
 If you want zero backend code:
-1. Create a form at [formspree.io](https://formspree.io) — free for 50 submissions/month
+1. Create a form at [formspree.io](https://formspree.io) free for 50 submissions/month
 2. In `ContactForm.tsx`, replace the `fetch("/api/contact", ...)` call with:
    ```ts
    const res = await fetch(process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT!, {
@@ -216,13 +216,13 @@ If you want zero backend code:
      body: JSON.stringify(data),
    });
    ```
-   Note: This sends data to Formspree's servers — verify their GDPR compliance for Greek/EU users.
+   Note: This sends data to Formspree's servers verify their GDPR compliance for Greek/EU users.
 
 ---
 
 ## Deployment to Vercel (Recommended)
 
-Vercel is the creator of Next.js — zero-config deployment, free tier available.
+Vercel is the creator of Next.js zero-config deployment, free tier available.
 
 ### Steps
 
@@ -238,7 +238,7 @@ Vercel is the creator of Next.js — zero-config deployment, free tier available
 2. **Import on Vercel**:
    - Go to [vercel.com](https://vercel.com) → New Project
    - Import your GitHub repository
-   - Vercel auto-detects Next.js — no configuration needed
+   - Vercel auto-detects Next.js no configuration needed
 
 3. **Set environment variables** in Vercel Dashboard:
    - Project → Settings → Environment Variables
@@ -273,9 +273,9 @@ Replace all `TODO` items before going live:
 
 ### Photos (place in `public/images/`)
 
-- [ ] `doctor/hero.jpg` — Main hero photo (portrait, 800×1000px min, WebP preferred)
-- [ ] `doctor/about.jpg` — About section photo (portrait, 700×900px min)
-- [ ] `office/main.jpg` — Main office photo (landscape, 1200×900px min)
+- [ ] `doctor/hero.jpg` Main hero photo (portrait, 800×1000px min, WebP preferred)
+- [ ] `doctor/about.jpg` About section photo (portrait, 700×900px min)
+- [ ] `office/main.jpg` Main office photo (landscape, 1200×900px min)
 - [ ] `office/waiting-room.jpg`
 - [ ] `office/examination-room.jpg`
 - [ ] `office/equipment.jpg`
@@ -302,8 +302,8 @@ import Image from "next/image";
 
 ### SEO / Branding
 
-- [ ] `public/og-image.jpg` — 1200×630px image for social sharing
-- [ ] `public/favicon.ico` and PNG variants — use [favicon.io](https://favicon.io)
+- [ ] `public/og-image.jpg` 1200×630px image for social sharing
+- [ ] `public/favicon.ico` and PNG variants use [favicon.io](https://favicon.io)
 - [ ] Google Business Profile URL → add to `sameAs` array in `src/lib/schema.ts`
 - [ ] Google Maps embed URL → replace placeholder in `Contact.tsx`
 - [ ] Update social links in `Footer.tsx`
@@ -325,7 +325,7 @@ import Image from "next/image";
 
 | Feature | Effort | Value |
 |---|---|---|
-| Cookie consent banner (GDPR) | Medium | High — legally required |
+| Cookie consent banner (GDPR) | Medium | High legally required |
 | Google Analytics (GA4) with consent | Low | Medium |
 | Appointment booking integration (Doctoranytime, HealthCheck.gr) | Medium | High |
 | Blog / Ιατρικά Άρθρα section | Medium | High for SEO |

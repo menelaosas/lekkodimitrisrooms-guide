@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --sea: #2A6CA4;
-  --sea-d: #1A4E7A;
-  --sea-l: #E8F2FA;
+  --sea: #8B5E3C;
+  --sea-d: #6B4828;
+  --sea-l: #EDE0D4;
   --terra: #C4672A;
   --terra-l: #FDF1EA;
-  --sand: #FAF8F3;
-  --ink: #1A2E3B;
-  --warm: #6B7A84;
-  --pb: #8C9BA5;
+  --sand: #F4EBDA;
+  --ink: #2C1A0E;
+  --warm: #7A6A5A;
+  --pb: #A09080;
 }
 
 @layer base {
   html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-  body { background-color: #FAF8F3; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; color: #1A2E3B; overflow-x: hidden; }
-  :focus-visible { outline: 2px solid #2A6CA4; outline-offset: 2px; }
+  body { background-color: #F4EBDA; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; color: #2C1A0E; overflow-x: hidden; }
+  :focus-visible { outline: 2px solid #8B5E3C; outline-offset: 2px; }
   :focus:not(:focus-visible) { outline: none; }
 }
 
@@ -30,7 +30,7 @@
   .step-num {
     width: 24px; height: 24px;
     border-radius: 50%;
-    background-color: #2A6CA4;
+    background-color: #8B5E3C;
     color: white;
     font-size: 11px;
     font-weight: 500;
@@ -44,8 +44,8 @@
   .badge-no   { background-color: #fef2f2; color: #dc2626; font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 999px; }
   .badge-warn { background-color: #fffbeb; color: #d97706; font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 999px; }
   .info-box {
-    background-color: rgba(42, 108, 164, 0.08);
-    color: #1A4E7A;
+    background-color: rgba(139, 94, 60, 0.08);
+    color: #6B4828;
     border-radius: 8px;
     padding: 10px 12px;
     font-size: 12px;
@@ -60,8 +60,8 @@
     line-height: 1.6;
   }
   .copy-btn {
-    background-color: rgba(42, 108, 164, 0.1);
-    color: #2A6CA4;
+    background-color: rgba(139, 94, 60, 0.1);
+    color: #8B5E3C;
     font-size: 11px;
     font-weight: 500;
     padding: 4px 12px;
@@ -70,10 +70,10 @@
     cursor: pointer;
     transition: all 0.15s;
   }
-  .copy-btn:hover { background-color: #2A6CA4; color: white; }
+  .copy-btn:hover { background-color: #8B5E3C; color: white; }
   .submit-btn {
     width: 100%;
-    background-color: #2A6CA4;
+    background-color: #8B5E3C;
     color: white;
     border-radius: 8px;
     padding: 12px;
@@ -84,7 +84,7 @@
     cursor: pointer;
     transition: background-color 0.15s;
   }
-  .submit-btn:hover { background-color: #1A4E7A; }
+  .submit-btn:hover { background-color: #6B4828; }
   .fade-up { animation: fadeUp 0.25s ease forwards; }
 }
 
@@ -94,4 +94,4 @@
 }
 
 ::-webkit-scrollbar { width: 4px; height: 4px; }
-::-webkit-scrollbar-thumb { background-color: rgba(42, 108, 164, 0.2); border-radius: 999px; }
+::-webkit-scrollbar-thumb { background-color: rgba(139, 94, 60, 0.2); border-radius: 999px; }

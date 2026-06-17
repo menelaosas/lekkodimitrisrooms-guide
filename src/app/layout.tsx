@@ -4,8 +4,8 @@ import { LangProvider } from "@/lib/lang-context";
 import { NavProvider } from "@/lib/nav-context";
 
 export const metadata: Metadata = {
-  title: "LekkoDimitris Rooms — Οδηγός Επισκεπτών",
-  description: "Ψηφιακός οδηγός διαμονής για τα LekkoDimitris Rooms στη Γεφύρα, Μονεμβασιά.",
+  title: "LImeraView Οδηγός Επισκεπτών",
+  description: "Ψηφιακός οδηγός διαμονής για τα LImeraView στη Γεφύρα, Μονεμβασιά.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

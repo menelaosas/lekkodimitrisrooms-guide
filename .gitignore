@@ -9,7 +9,7 @@ out/
 dist/
 build/
 
-# Environment files — NEVER commit these
+# Environment files NEVER commit these
 .env
 .env.local
 .env.development.local

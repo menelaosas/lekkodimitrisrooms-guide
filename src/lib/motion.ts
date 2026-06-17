@@ -16,7 +16,7 @@ export const easeTransition = {
 
 // ─── Scroll reveal variants ───────────────────────────────────────────────────
 
-/** Fade up from below — default for most sections */
+/** Fade up from below default for most sections */
 export const fadeUpVariants: Variants = {
   hidden: { opacity: 0, y: 32 },
   visible: { opacity: 1, y: 0, transition: easeTransition },
