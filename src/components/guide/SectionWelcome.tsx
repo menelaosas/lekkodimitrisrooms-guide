@@ -1,19 +1,22 @@
 "use client";
+import { useState } from "react";
 import { useLang } from "@/lib/lang-context";
 import { useNav } from "@/lib/nav-context";
 import { PROPERTY } from "@/lib/guide-config";
-import { Wifi, ShieldCheck, MapPin, Settings, Phone, MessageCircle, Mail, Globe } from "lucide-react";
+import { Wifi, ShieldCheck, MapPin, PlayCircle, Phone, MessageCircle, Mail, Globe } from "lucide-react";
+import { VideoModal } from "./VideoModal";
 
 const QUICK = [
-  { id: "wifi",       Icon: Wifi,        el: "WiFi & Check-in",   en: "WiFi & Check-in" },
-  { id: "rules",      Icon: ShieldCheck, el: "Κανόνες",           en: "House Rules" },
-  { id: "appliances", Icon: Settings,    el: "Συσκευές",          en: "Appliances" },
-  { id: "area",       Icon: MapPin,      el: "Οδηγός Περιοχής",   en: "Area Guide" },
+  { id: "wifi",   Icon: Wifi,        el: "WiFi & Check-in",           en: "WiFi & Check-in" },
+  { id: "rules",  Icon: ShieldCheck, el: "Κανόνες",                   en: "House Rules" },
+  { id: "video",  Icon: PlayCircle,  el: "Βίντεο Εισόδου",            en: "Entry Video" },
+  { id: "area",   Icon: MapPin,      el: "Οδηγός Περιοχής",           en: "Area Guide" },
 ];
 
 export function SectionWelcome() {
   const { lang } = useLang();
   const { go } = useNav();
+  const [videoOpen, setVideoOpen] = useState(false);
 
   return (
     <>
@@ -42,7 +45,7 @@ export function SectionWelcome() {
         {QUICK.map(({ id, Icon, el, en }) => (
           <button
             key={id}
-            onClick={() => go(id)}
+            onClick={() => (id === "video" ? setVideoOpen(true) : go(id))}
             className="guide-card p-4 flex flex-col items-center gap-2 hover:border-sea/40 hover:shadow-sm transition-all text-center"
           >
             <Icon size={22} strokeWidth={1.4} className="text-sea" />
@@ -50,6 +53,8 @@ export function SectionWelcome() {
           </button>
         ))}
       </div>
+
+      <VideoModal open={videoOpen} onClose={() => setVideoOpen(false)} />
 
       {/* Host */}
       <div className="guide-card p-4 mb-4">
